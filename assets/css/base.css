@@ -1,0 +1,29 @@
+:root {
+    /*  */
+    --header-height: 5vw;
+    --header-nav-height: 5vw;
+
+    /* color */
+    --box-shadow-color: rgba(0,0,0, 0.4);
+    --black-color: black;
+    --white-color: #fff;
+    --text-color: #b0b0b0;
+    --hover-color: #8a8a8a65;
+    --primary-color: #cdcdcd;
+    --pink-color: #f1cfd0 ;
+    --blue-color: rgb(40, 132, 141);
+    --blue-hover-color: rgba(40, 132, 141, 0.5);
+
+    /* z-index */
+    --z-index-first: 1;
+    --z-index-second: 2;
+
+}
+
+html {
+    font-size: 62.5%;
+    line-height: 1.6vh;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+    color: var(--blue-color);
+}   

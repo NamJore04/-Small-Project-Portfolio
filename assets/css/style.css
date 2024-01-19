@@ -1,0 +1,392 @@
+/* Reset css */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    position: relative;
+    top: -10px;
+    right: 0;
+    left: 0;
+}
+
+html {
+    font-family:  Helvetica, Arial, sans-serif;
+}
+
+
+/* comon */
+.row {
+    margin-left: -8px;
+    margin-right: -8px;
+}
+
+.row::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.col {
+    float: left;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+.col-half {
+    width: 50%;
+}
+
+.col-full {
+    width: 100%;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.mt-8 {
+    margin-top: 8px;
+}
+
+.mt-16 {
+    margin-top: 16px;
+}
+
+/* 
+Từ ngoài vào trong
+Từ trên xuống dưới 
+Từ t quan đến chi tiết
+*/
+
+/* 
+vị trí
+Kích thướt
+Màu sắc
+Kiểu dáng */
+
+
+
+
+
+/* main */
+
+/* header */
+.header {
+    position: fixed;
+    height: var(--header-height);
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--pink-color);
+    display: flex;
+    justify-content: space-between;
+    z-index: var(--z-index-first);
+}
+
+.header__nav {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.header__nav, .header__nav-items-subnav {
+    list-style-type: none;
+}
+
+.header__nav-items-link {
+    display: flex;
+    padding: 0 2.4vw;
+    text-decoration: none;
+    list-style: none;
+    color: var(--blue-color);
+    line-height: var(--header-height);
+    text-transform: uppercase;
+    font-size: 1.3vw;
+}
+
+
+
+.header__nav-items:hover,
+.header__nav-items-subnav-text {
+    background-color: var(--blue-hover-color);
+}
+
+.header__nav-items-subnav-text :hover {
+    background-color: var(--hover-color);
+    color: var(--pink-color);
+}
+
+.header__nav-items:hover .header__nav-items-link {
+    color: var(--white-color);
+
+}
+
+.header__nav-items .header__nav-items-link  {
+    position: relative;
+}
+
+
+.header__nav-items-subnav {
+    position: absolute;
+    display: block;
+    justify-content: left;
+    overflow:hidden;
+    border-radius: .3vw;
+    z-index: var(--z-index-first);
+    box-shadow: 0 0 1vw var(--box-shadow-color);
+    line-height: 4vh;
+    display: none;
+}
+
+.header__nav-items:hover .header__nav-items-subnav {
+    display: block;
+}
+
+
+.header__nav-items-subnav a {
+    display: flex;
+    padding: .8vw 2.4vw;
+    text-decoration: none;
+    list-style: none;
+    color: var(--white-color);
+}
+
+.header__nav-items-subnav-text {
+    text-decoration-line: none;
+    text-transform: uppercase;
+    font-size: 1.2vw;
+}
+
+
+
+
+.header__nav-items-link.header__nav-items-link-show {
+    margin-right: 1.8vw;
+}
+
+.header__nav-items-link i {
+    position: absolute;
+    top: 1.8vw;
+    right: 0;
+}
+
+.header__nav-items-search {
+    font-size: 2vw;
+    color: var(--blue-color);
+
+}
+
+.search-icon {
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    margin: 0 2.4vw;
+    zoom: 0.9;
+}
+
+.header__nav-items-search:hover {
+    color: var(--white-color);
+}
+
+/* slider */
+.slider {
+    margin-top: 5vw;
+    background: url("https://images5.alphacoders.com/101/1016457.jpg")
+    center / cover;
+    padding-top: 50%;
+    position: relative;
+}
+
+.slider-text-content {
+    position: absolute;
+    top: calc(44%);
+    left: 18%;
+    transform: translateX(-50%);
+    text-align: center;
+    color: #ff94ab;
+}
+
+.slider-text-content:hover {
+    color: #5bb0aa;
+}
+
+.text-content-heading {
+    font-weight: 400;
+    margin: 1vw 0;
+    font-size: 2vw;
+    line-height: 2vw;
+}
+
+.text-content-decription {
+    margin: 1vw 0;
+    font-size: 1.6vw;
+    line-height: 1.6vw;
+}
+
+
+/* Content */
+.content-section {
+    width: 62.5%;
+    padding: 6.4vw 1.6vw;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.content .section-heading {
+    font-size: 2.5vw;
+    font-weight: 500;
+    letter-spacing: .4vw;
+    text-transform: uppercase;
+}
+
+.content .section-heading, 
+.content .section-subheading {
+    text-align: center;
+}
+
+.content .section-subheading {
+    font-size: 1.5vw;
+    margin: 3vw 0;
+    font-style: italic;
+    opacity: 0.6;
+}
+
+.content .about-text {
+    font-size: 1.4vw;
+    text-align: justify;
+    line-height: 1.8vw;
+}
+
+
+.content .members-list {
+    padding: 1.2vw 0 4.8vw 0 ;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.content .members-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.6vw;
+    margin: 4.8vw 0 0 .8vw;
+
+}
+
+.content .member-item {
+    float: left;
+
+}
+
+.content .member-item:hover {
+    transform: translateY(-2px);
+    cursor: pointer;
+}
+
+.content .member-item img {
+    width: 16vw;
+    border-radius: 1vw;
+}
+
+.content .member-name {
+    font-size: 1.3vw;
+    line-height: 1.6vw;
+    margin: 8px;
+}
+
+
+/* life section */
+.life-section {
+    background-color: #22348b;
+    color: #b6e8ff;
+    height: 47vw;
+}
+
+.image-lists {
+    display: flex;
+    margin-top: 4vw;
+
+}
+
+.image-lists li {
+    padding: 0 8px;
+    list-style: none;
+    font-size: 1.3vw;
+    height: 4vw;
+    line-height: 4vw;
+    text-align: center;
+}
+
+.image-lists img {
+    width: 16vw;
+    border-radius: 10px;
+}
+
+.image-lists img:hover {
+    transform: translateY(-1px);
+    cursor: pointer;
+}
+
+
+
+/* contact */
+.contact-centent {
+    margin-top: 48px;
+}
+
+.contact-info p {
+    font-size: 1.7vw;
+    line-height: 3vw;
+
+}
+
+
+.contact-info i[class*="fa-"] {
+    width: 3vw;   
+    display: inline-block;
+}
+
+.contact-form {
+    font-size: 1.5vw;
+}
+
+.contact-form .form-control {
+    padding: 1vw;
+    border: 1px solid #ccc;
+    width: 100%;
+    font-size: 1.5vw;
+
+}
+
+.contact-form .form-submit-btn {
+    background-color: var(--pink-color);
+    color: var(--blue-color) ;
+    border: none;
+    padding: 1vw 1.6vw;
+    float: right;
+    cursor: pointer;
+    font-size: 1.5vw;
+}
+
+.contact-form .form-submit-btn:hover {
+    background-color: var(--blue-color);
+    color: var(--pink-color);
+    box-shadow: 0 0  1vw var(--box-shadow-color);
+}
+
+/*  Map section */
+html .map-section {
+    width: 100%;
+    margin-top: 2.4vw;
+}
+
+html .map-section img {
+    width: 100vw;
+    position: absolute;
+    right: 0;
+}
